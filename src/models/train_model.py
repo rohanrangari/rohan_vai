@@ -1,11 +1,6 @@
 import os
-import cv2
-import gzip
 import numpy as np
 import pandas as pd
-import os
-
-
 from sklearn.metrics import classification_report
 from tensorflow.keras.preprocessing import image
 import tensorflow as tf

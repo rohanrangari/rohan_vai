@@ -2,6 +2,7 @@ os
 gzip
 pandas
 numpy
+joblib
 matplotlib
 tensorflow
-joblib
+scikit-learn
