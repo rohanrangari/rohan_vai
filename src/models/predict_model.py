@@ -22,7 +22,7 @@ def preprocess_img():
 def predict(expanded_img):
     model = load_model(config.model_path)
     test_predict = np.argmax(model.predict(expanded_img), axis=1)
-    pred_class = config.class_names[test_predict]
+    pred_class = config.class_names[int(test_predict)]
     return pred_class
 
 
