@@ -7,7 +7,12 @@ MODEL_SAVE_PATH = rf"{DATA_DIR}\models\trained_models"
 REPORT_PATH = rf"{DATA_DIR}\reports\classification_report.csv"
 test_img_path = rf"{DATA_DIR}\test5.JPG"
 path2 = rf"{DATA_DIR}\opencv-greyscale.png"
+loss_plot = rf"C:\Rohan\Vector AI\repo\rohan_vai\src\plots\loss-plot.png"
+acc_plot = rf"C:\Rohan\Vector AI\repo\rohan_vai\src\plots\acc-plot.png"
 model_path = r"C:\Rohan\Vector AI\repo\rohan_vai\src\models\trained_models\fmnist_model.h5"
+classification_report = (
+    rf"C:\Rohan\Vector AI\rohan_vai\src\reports\classification_report.csv"
+)
 
 class_names = [
     "T-shirt/top",

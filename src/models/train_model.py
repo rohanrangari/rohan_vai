@@ -1,4 +1,5 @@
 import os
+from matplotlib import path
 import numpy as np
 import pandas as pd
 from sklearn.metrics import classification_report
@@ -16,16 +17,18 @@ import config as config
 from make_dataset import load_data
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
-model_path = r"C:\Rohan\Vector AI\repo\rohan_vai\src\models\trained_models\fmnist_model.h5"
 
 
 def load_data():
+    """Loading the dataset"""
     (x_train, y_train), (x_test, y_test) = fashion_mnist.load_data()
     return x_train, y_train, x_test, y_test
 
 
 def get_model(img_width, img_height, no_of_dim):
-    """[summary]"""
+    """
+    Defining the CNN architecture & return it as model object
+    """
     model = Sequential()
     model.add(
         Conv2D(
@@ -47,26 +50,39 @@ def get_model(img_width, img_height, no_of_dim):
 
 
 def draw_plots(model):
+    """
+    Uses the trained/saved model to draw the plots for Loss & Accuracy metrics
+
+    """
     metrics = pd.DataFrame(model.history.history)
     metrics[["loss", "val_loss"]].plot()
     plt.savefig(
-        r"C:\Rohan\Vector AI\repo\rohan_vai\src\plots\loss-plot.png",
+        model.loss_plot,
         dpi=300,
         bbox_inches="tight",
     )
     metrics[["accuracy", "val_accuracy"]].plot()
     plt.savefig(
-        r"C:\Rohan\Vector AI\repo\rohan_vai\src\plots\acc-plot.png",
+        model.acc_plot,
         dpi=300,
         bbox_inches="tight",
     )
 
 
 def model_performance(model, x_test, y_test):
+    """
+
+    Args:
+        model : trained/saved model
+        x_test : Test data/Images
+        y_test : Test labels
+    """
     predictions = np.argmax(model.predict(x_test), axis=1)
     report = classification_report(y_test, predictions, output_dict=True)
     df = pd.DataFrame(report).transpose()
-    df.to_csv("classification_report.csv")
+    print("classification_report:")
+    print(df)
+    df.to_csv(path=config.classification_report, index=False)
 
 
 def main():
@@ -93,8 +109,10 @@ def main():
     y_cat_train = to_categorical(y_train, num_classes)
     y_cat_test = to_categorical(y_test, num_classes)
 
+    # Step 4: Define & BUild the model
     model = get_model(img_width, img_height, no_of_dim)
 
+    # Step 5: Training Stage
     model.fit(
         x_train,
         y_cat_train,
@@ -103,8 +121,11 @@ def main():
         verbose=0,
     )
 
-    model.save(model_path)
+    # Step 6: Saving the trained model
+    model.save(config.model_path)
+    # Step 7: Visualkization on the trained model
     draw_plots(model)
+    # Step 8: model performance metrics on the trained model
     model_performance(model, x_test, y_test)
 
 
