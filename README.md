@@ -25,8 +25,23 @@ Project Organization
     │   │   └── train_model.py
     │   │   └── make_dataset.py
     │   │   └── config.py
+    │   │   └── publisher.py
+    │   │   └── subscriber.py
     │   │   └── train_models  <- train_models are saved in this directory
     │   │   └──training.ipynb <- Notebook used for training
     │   │
     │   └── plots    <- Plots/ Visualizations are saved here.
     │   └── reports  <- Model Performance Metrics Reports are saved here. eg: classification-reports.csv
+
+==============================
+Steps to use the application
+* Step:1 ->  pip install -r requirements.txt
+* Step:2 ->  Make the necessary changes in the config.py
+* Step:3 ->  Run python train_model.py
+* Step:4 ->  Check the model artifacts such as acc-plot, loss-plot, classification_report. trained_model.
+* Step:5 ->  Use predict_model.py to run test on trained_model
+* Step:6 ->  Create GCP Pub-sub topics & Subscription & update the topic,subscriptions paths in config.py
+* Step:7 ->  Create GCP Iam keys-json and update in config.py
+* Step8 ->  Run subscriber.py
+* Step:9 ->  Run publish.py
+

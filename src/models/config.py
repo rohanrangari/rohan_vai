@@ -13,7 +13,11 @@ model_path = r"C:\Rohan\Vector AI\repo\rohan_vai\src\models\trained_models\fmnis
 classification_report = (
     rf"C:\Rohan\Vector AI\rohan_vai\src\reports\classification_report.csv"
 )
-
+# GCP Configurations
+credentials_path = r"C:\Rohan\Vector AI\gcp\rohan-private-key.json"
+topic_path = "projects/rohan-vai/topics/CnnModel"
+subscriber_path = "projects/rohan-vai/subscriptions/CnnModel-sub"
+# model classnames
 class_names = [
     "T-shirt/top",
     "Trouser",

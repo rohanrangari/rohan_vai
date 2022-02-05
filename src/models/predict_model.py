@@ -6,6 +6,11 @@ from tensorflow.keras.models import load_model
 import config as config
 
 
+def health_check():
+    print("Health check")
+    return "Health check"
+
+
 def preprocess_img():
     img = cv2.imread(config.test_img_path)
     gray_image = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -29,7 +34,8 @@ def predict(expanded_img):
 def main():
     expanded_img = preprocess_img()
     pred_class = predict(expanded_img)
-    print(pred_class)
+    # print(pred_class)
+    return pred_class
 
 
 if __name__ == "main":
