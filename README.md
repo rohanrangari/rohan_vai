@@ -66,6 +66,9 @@ Go to the project directory
 * Step8 ->  Run `subscriber.py`
 * Step:9 ->  Run `publisher.py`
 
+## Application Architecture
+
+
 ## Tech Stack
 
 
