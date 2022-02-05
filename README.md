@@ -6,7 +6,7 @@ A complete Multi-class Image Classifier using Python & GCP
 
 - [@rohanrangari](https://github.com/rohanrangari)
 
-Project Organization
+## Project Organization
 ------------
 
     ├── LICENSE
@@ -52,16 +52,21 @@ Go to the project directory
 ```
 
 ## Steps to use the application
-* Step:1 ->
+
+* Step:1
 ```bash
   pip install -r requirements.txt
 ```
-* Step:2 ->  Make the necessary changes in the config.py
-* Step:3 ->  Run python train_model.py
+* Step:2 ->  Make the necessary changes in the `config.py`
+* Step:3 ->  Run python `train_model.py`
 * Step:4 ->  Check the model artifacts such as acc-plot, loss-plot, classification_report. trained_model.
 * Step:5 ->  Use predict_model.py to run test on trained_model
-* Step:6 ->  Create GCP Pub-sub topics & Subscription & update the topic,subscriptions paths in config.py
-* Step:7 ->  Create GCP Iam keys-json and update in config.py
-* Step8 ->  Run subscriber.py
-* Step:9 ->  Run publish.py
+* Step:6 ->  Create GCP Pub-sub topics & Subscription & update the topic,subscriptions paths in `config.py`
+* Step:7 ->  Create GCP Iam keys-json and update in `config.py`
+* Step8 ->  Run `subscriber.py`
+* Step:9 ->  Run `publisher.py`
 
+## Tech Stack
+
+
+**Technologies & Languages :** Python, VS Code, GCP
