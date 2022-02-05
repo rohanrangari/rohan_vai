@@ -37,7 +37,21 @@ Project Organization
     │   └── reports  <- Model Performance Metrics Reports are saved here. eg: classification-reports.csv
 
 ==============================
-Steps to use the application
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/rohanrangari/rohan_vai.git
+```
+
+Go to the project directory
+
+```bash
+  cd my-project
+```
+
+## Steps to use the application
 * Step:1 ->
 ```bash
   pip install -r requirements.txt
