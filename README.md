@@ -35,7 +35,8 @@ Project Organization
 
 ==============================
 Steps to use the application
-* Step:1 ->  ```bash
+* Step:1 ->
+```bash
   pip install -r requirements.txt
 ```
 * Step:2 ->  Make the necessary changes in the config.py
