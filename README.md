@@ -68,6 +68,7 @@ Go to the project directory
 
 ## Application Architecture
 
+![Arch](https://github.com/rohanrangari/rohan_vai/blob/main/Screenshots/Arch.png)
 
 ## Tech Stack
 
