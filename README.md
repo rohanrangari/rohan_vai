@@ -35,7 +35,9 @@ Project Organization
 
 ==============================
 Steps to use the application
-* Step:1 ->  pip install -r requirements.txt
+* Step:1 ->  ```bash
+  pip install -r requirements.txt
+```
 * Step:2 ->  Make the necessary changes in the config.py
 * Step:3 ->  Run python train_model.py
 * Step:4 ->  Check the model artifacts such as acc-plot, loss-plot, classification_report. trained_model.
