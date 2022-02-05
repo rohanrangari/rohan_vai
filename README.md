@@ -2,6 +2,9 @@
 
 A complete Multi-class Image Classifier using Python & GCP
 
+## Authors
+
+- [@rohanrangari](https://github.com/rohanrangari)
 
 Project Organization
 ------------
