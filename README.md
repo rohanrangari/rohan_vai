@@ -1,7 +1,7 @@
-multi-class-img-clf
-==============================
+# Fashion MNIST Image Classifier
 
-A complete Multi-class Image Classifier using Python
+A complete Multi-class Image Classifier using Python & GCP
+
 
 Project Organization
 ------------
