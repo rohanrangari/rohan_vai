@@ -53,7 +53,7 @@ Go to the project directory
 
 ## Steps to use the application
 
-* Step:1
+* Step:1 -> Install all dependencies
 ```bash
   pip install -r requirements.txt
 ```
