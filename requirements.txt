@@ -7,3 +7,4 @@ matplotlib
 tensorflow
 scikit-learn
 google-cloud-pubsub
+kafka-python
